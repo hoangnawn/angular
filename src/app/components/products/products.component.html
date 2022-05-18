@@ -1,29 +1,35 @@
-<h1>{{titleComponent}}</h1>
+<!-- <h1>{{titleComponent}}</h1>
 <input type="text" [(ngModel)]="productName"> {{productName}}
 <br>
 <button class="btn btn-primary" (click)="onHandleClick()">Click</button>
-<span style="font-size: 30px; color: #000;">{{isStatus ? "Ẩn" : "Hiện"}}</span>
-<div *ngIf="isStatus">
-    <table class="table table-bodered">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Trạng thái</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of listProduct; let i = index">
-                <td>{{i + 1}}</td>
-                <td>{{product.name}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td>
-                <td>
-                    <button class="btn btn-danger" (click)="onHandleDelete(product.id)">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<span style="font-size: 30px; color: #000;">{{isStatus ? "Ẩn" : "Hiện"}}</span> -->
+<!-- <div> -->
+<table class="table table-bordererd">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.status ? 'Còn hàng' : 'hết hàng' }}</td>
+            <td>
+                <button class="btn btn-danger" (click)="onHandleDelete(product.id)">Delete</button>
+                <button class="btn btn-info ms-1" (click)="onhandleDetail(product)">Detail</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="detail" *ngIf="productDetail">
+    <hr />
+    <h2>Product Detail Component</h2>
+    <app-product-detail [product]="productDetail"></app-product-detail>
+    <router-outlet></router-outlet>
 </div>
