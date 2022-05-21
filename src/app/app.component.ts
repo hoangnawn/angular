@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IProduct } from './components/models/Products';
+import data from './data';
 
 
 @Component({
@@ -9,13 +10,11 @@ import { IProduct } from './components/models/Products';
 })
 export class AppComponent {
   title = 'angular';
-  ProductList: IProduct[]=[
-    {id:1,name:"Product 1",price:123456, status:false},
-    {id:2,name:"Product 2",price:123456, status:true},
-    {id:3,name:"Product 3",price:123334456, status:true}
-
-  ]
-
+  ProductList: IProduct[]= data
+  onHandleAdd(product: any) {
+    console.log(product);
+    this.ProductList.push(product);
+  }
 }
 // onHandleClick() {
 //   console.log(1);
