@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import data from 'src/app/data';
-import { ProductService } from '../../services/product.service';
 import { IProduct } from '../models/Products';
-
+import { ProductService } from '../../services/product.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-product-add',
-  templateUrl: './product-add.component.html',
-  styleUrls: ['./product-add.component.css']
+  selector: 'app-product-update',
+  templateUrl: './product-update.component.html',
+  styleUrls: ['./product-update.component.css']
 })
-export class ProductAddComponent implements OnInit {
-
+export class ProductUpdateComponent implements OnInit {
   product: IProduct = {
     name: "",
     price: 0,
@@ -33,18 +30,14 @@ export class ProductAddComponent implements OnInit {
   }
   onSubmit() {
     const id = this.acctivatedRoute.snapshot.paramMap.get('id');
-    if (id) {
-      // call services edit product
-      // nếu thành công thì trả về sản phẩm vừa cập nhật xong
-      this.productServive.updateProduct(this.product).subscribe(data => console.log(data))
-    } else {
-      // call service add product
+    if(id){
+      // call service edit product
+      //nếu thành công thì trả về sp vừa cập nhật
       this.productServive.addProduct(this.product).subscribe(data => {
-        // chuyển hướng router
-        this.router.navigateByUrl('/product');
+        // chuyển hướng router 
+        this.router.navigateByUrl('/product')
       })
     }
   }
-  
 
 }

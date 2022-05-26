@@ -12,7 +12,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ManagerProductComponent } from './pages/manager-product/manager-product.component';
 import { ProductComponent } from './pages/product/product.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ProductUpdateComponent } from './components/product-update/product-update.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http'
     ManagerProductComponent,
     ProductComponent,
     DetailProductComponent,
+    ProductUpdateComponent,
     
   ],
   imports: [

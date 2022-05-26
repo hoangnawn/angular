@@ -26,6 +26,13 @@ export class ProductsComponent implements OnInit {
       this.products = data
     })
   }
+  remove(id:any){
+    console.log(1230);
+    this.productService.removeProduct(id).subscribe(data => {
+      this.products = this.products.filter(item => item.id != id)
+    });
+    
+  }
 
   // onHandleClick() {
   //   console.log(1);

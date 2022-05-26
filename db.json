@@ -1,22 +1,28 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Product A",
-            "price": 100,
-            "status": true
-        },
-        {
-            "id": 2,
-            "name": "Product B",
-            "price": 200,
-            "status": true
-        },
-        {
-            "id": 3,
-            "name": "Product C",
-            "price": 300,
-            "status": true
-        }
-    ]
+  "products": [
+    {
+      "id": 2,
+      "name": "Product B update",
+      "price": 200,
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "price": 300,
+      "status": true
+    },
+    {
+      "name": "namdz 1235545",
+      "price": 4512,
+      "status": true,
+      "id": 5
+    },
+    {
+      "name": "nam123",
+      "price": 123456,
+      "status": true,
+      "id": 6
+    }
+  ]
 }
