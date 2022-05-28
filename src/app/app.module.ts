@@ -13,7 +13,13 @@ import { ManagerProductComponent } from './pages/manager-product/manager-product
 import { ProductComponent } from './pages/product/product.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductUpdateComponent } from './components/product-update/product-update.component'
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -26,16 +32,16 @@ import { ProductUpdateComponent } from './components/product-update/product-upda
     ManagerProductComponent,
     ProductComponent,
     DetailProductComponent,
-    ProductUpdateComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
   
 })

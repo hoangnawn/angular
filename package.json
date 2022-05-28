@@ -2,7 +2,7 @@
   "name": "angular",
   "version": "0.0.0",
   "scripts": {
-    "runserver":"json-server --watch db.json --port 3000",
+    "runserver": "json-server --watch db.json --port 3000",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -21,6 +21,7 @@
     "@angular/router": "~13.3.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
+    "ng-zorro-antd": "^13.2.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
