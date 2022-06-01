@@ -24,5 +24,13 @@
       "status": true,
       "id": 6
     }
+  ],
+  "users": [
+    {
+      "email": "nam@123.com",
+      "password": "$2a$10$vnBFI7MFwBx8Fp4jam4wP.NDqA0Sd.fBckde/mFVO2uR5QK2.MHGu",
+      "username": "namdz11",
+      "id": 1
+    }
   ]
 }

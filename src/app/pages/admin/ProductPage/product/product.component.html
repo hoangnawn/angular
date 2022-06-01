@@ -1,0 +1,23 @@
+<nz-table #basicTable>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Action</th>
+            <th> <a href="admin/product/add" nz-button nzType="link">Add</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.status ? 'Còn hàng' : 'hết hàng' }}</td>
+            <td>
+                <button class="btn btn-danger" (click)="remove(product.id)">Delete</button>
+                <button class="btn btn-info ms-1">Detail</button>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>
